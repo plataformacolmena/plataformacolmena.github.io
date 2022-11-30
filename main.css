@@ -1,0 +1,1133 @@
+body {
+  background: #ECF3FD;
+  /* color: white; */
+}
+
+ /* NAVEGACION PRINCIPAL */
+  .tabs { 
+    max-width: auto; 
+    
+    width: 100%; 
+    background: #fff; 
+    box-shadow: 0px Opx 10px
+    
+  }
+
+  .tabs_head {
+    display: flex; 
+    align-items: stretch;
+  }
+  .tabs_toggle {
+    display: flex; 
+    width: 33.3334%; 
+    height: 50px; 
+    align-items: center; 
+    justify-content: center; 
+    background: #f2f2f2; 
+    cursor: pointer;
+    border-left: solid 1px #BCBCBC ;
+    border-top: solid 1px #BCBCBC;
+    border-right: solid 1px #BCBCBC;
+    border-bottom: solid 1px #BCBCBC;
+  }
+
+  .tabs_toggle.is-active {
+    font-size: 17px;
+    border-bottom: none ;
+    background: #B6B2AD; 
+    border-radius: 5px 5px 0px 0px;
+  
+  }
+
+  .tabs_content { 
+    background-color:  #B6B2AD;
+    grid-gap: 5px;
+    height: 100%;
+    padding: 10px; 
+    display: none;
+    border-left: solid 1px #BCBCBC ;
+    border-right: solid 1px #BCBCBC;
+    border-bottom: solid 1px #BCBCBC;
+
+  }
+  .tabs_content.is-active { 
+    border-top: none ;
+    display: block;
+    /* display: grid; */
+    /* grid-template-columns: repeat(3,1fr); */
+    border-radius: 0px 0px 5px 5px;
+  }
+  .tabs_title {
+    /* font-size: 18px;  */
+    color: #000; 
+    font-weight: bold; 
+    margin-bottom: 20px;
+  }
+  .tabs_text {
+    /* font-size: 14px;  */
+    color: #000;
+  }
+
+
+  .list-title {
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+  }
+
+  .board-lists {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+  }
+
+  .board-list {
+    background-color: #e05e41 ; 
+    border-radius: 3px;
+    /* Chrome use a fixed height     */
+    width: auto;
+    height: max-content;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .card {
+    background-color:  #B2ABB6;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    padding: 5px;
+    margin: 5px;
+    cursor:pointer;
+    width:auto ;
+    height: max-content;
+    }
+
+  .card2 {
+    background-color:  #e05e41;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9,30,66,.25);
+    padding: 10px;
+    margin: 10px;
+    cursor:pointer;
+    width:auto ;
+    height: max-content;
+    }
+  /* FIN NAVEGACION PRINCIPAL */
+
+  /* NAVEGACION SECUNDARIA */
+/* .tabs { 
+  max-width: auto;
+  width: 100%; 
+  background: #fff; 
+  box-shadow: 0px Opx 10px
+  
+} */
+
+.tabs_head2 {
+  display: flex; 
+  align-items: stretch;
+}
+.tabs_toggle2 {
+  display: flex; 
+  width: 33.3334%; 
+  height: 50px; 
+  align-items: center; 
+  justify-content: center; 
+  background: #f2f2f2; 
+  cursor: pointer;
+  border-left: solid 1px #BCBCBC ;
+  border-top: solid 1px #BCBCBC;
+  border-right: solid 1px #BCBCBC;
+  border-bottom: solid 1px #BCBCBC;
+}
+
+.tabs_toggle2.is-active2 {
+  font-size: 17px;
+  border-bottom: none ;
+  background: #C7D1AC; 
+  border-radius: 5px 5px 0px 0px;
+ 
+}
+
+.tabs_content2 { 
+  background-color:  #C7D1AC;
+  grid-gap: 5px;
+  height: 100%;
+  padding: 10px; 
+  display: none;
+  border-left: solid 1px #BCBCBC ;
+  border-right: solid 1px #BCBCBC;
+  border-bottom: solid 1px #BCBCBC;
+
+}
+.tabs_content2.is-active2 { 
+  border-top: none ;
+  display: block;
+  /* display: grid; */
+  grid-template-columns: repeat(3,1fr);
+  border-radius: 0px 0px 5px 5px;
+}
+
+  /* FIN NAVEGACION SECUNDARIA */
+
+   /* CSS DE LILO - HAY QUE ACOMODAR E INTEGRAR */
+
+/* TABS LILO */
+
+   .tabs_head3 {
+    display: flex; 
+    align-items: stretch;
+  }
+  .tabs_togglelilo {
+    display: flex; 
+    width: 33.3334%; 
+    height: 50px; 
+    align-items: center; 
+    justify-content: center; 
+    background: #f2f2f2; 
+    cursor: pointer;
+    border-left: solid 1px #BCBCBC ;
+    border-top: solid 1px #BCBCBC;
+    border-right: solid 1px #BCBCBC;
+    border-bottom: solid 1px #BCBCBC;
+  }
+  
+  .tabs_togglelilo.is-activelilo {
+    font-size: 17px;
+    border-bottom: none ;
+    background: #C7D1AC; 
+    border-radius: 5px 5px 0px 0px;
+   
+  }
+  
+  .tabs_contentlilo { 
+    background-color:  #C7D1AC;
+    grid-gap: 5px;
+    height: 100%;
+    padding: 10px; 
+    display: none;
+    border-left: solid 1px #BCBCBC ;
+    border-right: solid 1px #BCBCBC;
+    border-bottom: solid 1px #BCBCBC;
+  
+  }
+  .tabs_contentlilo.is-activelilo { 
+    border-top: none ;
+    display: block;
+    /* display: grid; */
+    grid-template-columns: repeat(3,1fr);
+    border-radius: 0px 0px 5px 5px;
+  }
+
+
+/* FIN TABS LILO */
+
+   /* todas las paginas */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  }
+  
+  ul {
+  list-style: none;
+  }
+  
+  i {
+  color: #444444;
+  }
+
+body {
+
+  /* background: #ffffff; */
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+}
+
+.container { /*se usa para todas las paginas */
+  width: 915px;
+  margin: auto;
+  /* border:  0.1rem solid ; */
+}
+
+.showcase {
+  /* border:  0.1rem solid ; */
+  /*grid-template-columns: repeat(3,1fr); */
+  /* padding: 5px; */
+  background-color: #ECF3FD;
+  border-radius: 5px;
+  width: 100%;   
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* HTML INDEX */
+
+.bienvenida-lilo{ /* en index hay solo dos box, bienvenida-lilo y login  */
+      
+  /* border:  0.1rem solid ;  */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* background-color: #ECF3FD; */
+  border-radius: 5px;
+  padding: 5px;
+  margin: 50px;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+  /* font-size: 15px; */
+  align-items: center;
+  text-align: center;
+
+}
+
+.container-bienvenida-lilo {
+  cursor: pointer;
+  
+/*  border:  0.1rem solid ;   no olvidar eliminar */
+ 
+}
+.container-bienvenida-lilo img{
+  width:  500px;
+  
+}
+
+.login {
+  /* border:  0.1rem solid ;  no olvidar eliminar */
+  border-radius: 10px;
+  background-color:  #B6B2AD;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+
+}
+
+.login .entrar .button{
+  font-size: 17px;
+  margin: 20px;
+  background-color:  #e05e41;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  cursor:pointer;
+}
+
+
+/* HTML TABLERO //////////////////////////////////////////*/
+
+.nav-main {
+  /* border:  0.1rem solid ; */
+  /* font-size: 17px; */
+  display: flex;
+  justify-content: space-between;
+  background: #B2ABB6;
+  border-radius: 5px;
+  align-items: center ;
+  height: 60px;
+  padding: 20px;
+  margin-bottom: 5px; 
+  position: sticky;
+  top: 0;
+}
+
+
+.nav-brand {
+  /* border:  0.1rem solid ; */
+  width: 80px;
+  display: inline-block;
+}
+
+.nav-main ul {
+  display: flex;
+}
+
+.nav-main ul li {
+  padding: 10px;
+}
+
+.nav-main ul li:hover {
+  border-bottom: 2px solid #ffffff;
+}
+.nav-main ul.nav-menu {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.menu-btn{
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  right: 20px;
+  z-index: 2;
+  display: none;
+}
+
+.nav-main .menu-btn-forms {
+  position: absolute;
+  align-items: center;
+  cursor: pointer;
+  right: 200px;
+  z-index: 2;
+  margin-right: 20px;
+  display: none;
+}
+
+
+
+  /* .nav-main .menu-btn-forms {
+      position: absolute;
+      align-items: center;
+      cursor: pointer;
+      right: 200px;
+      z-index: 2;
+      margin-right: 20px;
+      display: block;
+  } */
+
+
+
+
+.nav-main .nav-menu-users{
+
+  position: absolute;
+  align-items: center;
+  cursor: pointer;
+  right: 200px;
+  z-index: 2;
+  display: none;
+}
+
+
+/* .nav-menu-right{
+  border: 00.1rem solid; 
+} */
+
+
+
+.title-panel {
+  display: block;
+  margin: 10px;
+  text-align: center; 
+}
+
+.title-panel h3{
+  font-weight:  700 bold ;
+  color: #5b5b5b;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+
+.forms {
+  /* border: 00.1rem solid; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: 0.5fr 1fr; */
+}
+
+.form-tableros{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  background:  #B6B2AD;
+  border-radius: 5px; 
+  padding:5px;
+  width: 50%;
+}
+
+.form-tareas {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+ /* grid-column: 1; */
+  /* grid-template-rows: 0.5fr 1fr 0.5fr; */
+
+  /* display: flex;
+  align-items: center; */
+  /* justify-content: space-evenly; */
+  background: #e05e41;
+  border-radius: 5px; 
+  padding:5px;
+}
+
+.form-titulo{
+/* border: 00.1rem solid; */
+font-weight: bold;
+
+}
+
+.form-titulo-user{
+  /* border: 00.1rem solid; */
+font-weight: bold;
+
+}
+
+.form-contenido {
+  /* border: 00.1rem solid; */
+  display: flex;
+  /* flex-direction: row;
+  */
+  align-items: center;
+  /* align-items: center; */
+  justify-content: space-between;
+  /* grid-template-columns: repeat(2, 1fr); */
+}
+
+.form-footer{
+  /* border: 00.1rem solid; */
+  padding:5px; 
+  /* align-items: flex-start; */
+}
+
+.form-group{
+  margin: 3px;
+  /* font-size: 20px; */
+}
+
+input, select, button{
+  border: 0;
+  /* outline: none; */
+  padding: 3px;
+  gap: 3px;
+  margin: 3px 3px  ;
+  border-radius: 5px;
+}
+
+
+
+
+/* MODAL //////////////////*/
+
+.modal-dialogo {
+
+  /* display: block; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  align-items: center;
+  justify-content: center;
+  background:#B6B2AD;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  
+ 
+}
+
+.modal-dialogo[open] {
+  animation: fade-in 500ms forwards;
+}
+.modal-dialogo[open]::backdrop{
+  opacity: 1;
+
+}
+
+.modal-dialogo[close] {
+  animation: fade-out 500ms forwards;
+  
+}
+
+@keyframes fade-in {
+  0%{
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  100%{
+      opacity: 0;
+  }
+  0% {
+      opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0%{
+      transform: translateY(100%);
+  }
+  100%{
+      transform: translateY(0%);
+   }
+}
+
+.modal-dialogo::backdrop {
+
+opacity: 0;
+
+}
+
+.modal-dialogo-contenido {
+  padding: 5px;
+  margin: 5px;
+  
+}
+
+.modal-dialogo-footer{
+  text-align: right;
+}
+
+.link-canales{
+  text-align: center;
+
+}
+
+/* Parte del tablero de las tres columnas*/
+
+/* parte de la web que está debajo del tablero de trabajo */
+.footer {
+  background:lightgrey;
+  border-radius: 5px;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links a {
+  margin: 10px 10px;
+}
+
+.links a i {
+  font-size: 1rem;
+}
+
+/* .showcase-config, .showcase-help{
+  background-color: #77aaff;
+} */
+
+/* HTML USUARIOS //////////////////////////////////////////*/
+
+
+.listaUsers { 
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-radius: 5px ;
+}
+
+.form-user{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* grid-template-columns: repeat(3,1fr);  */
+  background-color:#B6B2AD;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.form-contenido-user{
+  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr); 
+}
+.importarUsers{
+  text-align: center;
+  margin: 5px;
+}
+
+.importarUsers button{
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #e05e41;
+}
+.listaUsers {
+  background-color: #EEE9E9;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-radius: 3px;
+  
+}
+
+/* boton editar en HTML USUARIOS */
+.btn-editar{
+  background-color: #e05e41;
+}
+
+.video-Lilo{
+  background-color: #e05e41;
+  border-radius: 5px;
+  /* border: 00.1rem solid; */
+
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  padding: 5px;
+  margin: 5px;
+}
+
+.guia-help{
+  margin: 5px;
+  text-align: center;
+}
+
+
+/* HTML AYUDA */
+
+.video-Lilo-video{
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+.video-Lilo iframe{
+ width: auto;
+} 
+.tarjetas-help-button{
+  margin: 20px;
+}
+
+.tarjetas-help-button button{
+  margin: 5px;
+  font-size: 20px;
+  background-color: #B2ABB6;
+}
+
+.cardUserName{
+  border-radius: 5px;
+  margin: auto;
+  padding: 3px;
+}
+
+.tarjetas-help{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  /* border: 00.1rem solid; */
+  border-radius: 5px;
+ 
+}
+.tarjeta-help{
+  margin: 5px;
+  padding: 5px;
+  /* border: 00.1rem solid; */
+  border-radius: 5px;
+  background-color:#e05e41 ;
+}
+
+
+/* MEDIA QUERY - PUNTO DE CORTES.  //////////////////////////////////////////////////////////////////////// */
+
+@media all and (max-width: 900px){
+
+  .container { /*se usa para todas las paginas */
+      width: 100%;
+      /* border:  0.1rem solid ; */
+  }
+
+.form-contenido { 
+ 
+  align-items:flex-start;
+}
+
+}
+
+
+
+@media all and (max-width: 800px){
+
+  .bienvenida-lilo{ /* en index hay solo dos box, bienvenida-lilo y login  */
+      flex-direction: column;
+  }
+
+  .container-bienvenida-lilo img{
+      width:  400px;
+  }
+
+
+  /* .panel-herramientas{
+      position: sticky;
+      top: 0;
+  } */
+
+  .title-panel h3{
+      font-size: 20px;
+  }
+
+.forms {
+  /* display: grid; */
+  
+  /* grid-template-rows: 00.5fr 1fr ; */
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-tableros{
+  width: 100%;
+}
+
+.form-contenido{
+  flex-direction: column;
+}
+
+
+.listaUsers { 
+  grid-template-columns: repeat(2,1fr);
+}
+
+/* .form-titulo{
+  display: none;
+} */
+
+.form-titulo-user{
+display: none;
+}
+
+}
+
+
+@media (max-width: 600px){
+
+/* 
+  .form-tableros , .form-tareas {
+      width: 100%;
+      flex-direction: row;
+  }
+  */
+  /* .forms{
+      display: none;
+  } */
+/* 
+  .form-contenido{
+      width: 100%;
+      grid-template-columns: 1fr;
+  } */
+  
+  /* .form-tableros{
+      display: none;
+  }
+
+  .form-tareas{
+      display: none;
+  } */
+
+  .container-bienvenida-lilo img{
+      width:  300px;
+  }
+
+  .title-panel{
+      display: none;
+  }    
+
+  .listaUsers { 
+      grid-template-columns: repeat(1,1fr);
+  }
+
+  .form-user{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .tabs_content.is-active {
+     grid-template-columns: repeat(1,1fr);
+  }
+
+  .nuevatarea-titulo { /* desaparece AGREGAR TAREA del form agregar tarea */
+      display: none;
+  }
+
+  .nav-main ul.nav-menu-right{
+      margin-right: 20px;
+  }
+  
+  .menu-btn {
+      /* margin-right: 20px; */
+      display: block;
+      
+  }
+
+  .nav-main .menu-btn-forms {
+
+      display: flex;
+  } 
+  
+  .nav-main .nav-menu-users{
+      display: block;
+  
+  }
+
+  .nav-main ul.nav-menu {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #B2ABB6;
+      height: auto;
+      border-radius: 3px;
+      padding: 30px;
+      opacity: .9;
+      transform: translateX(-400px);
+      transition: transform .5s ease-in-out;
+
+  }
+  .nav-main ul.nav-menu.show {
+      transform: translateX(-20px);
+  }
+
+  .form-tableros {
+      display: block;
+      position: absolute;
+      height: auto;
+      border-radius: 3px;
+      padding: 30px;
+      opacity: .9;
+      transform: translateY(-400px);
+      transition: transform .5s ease-in-out;
+
+  }
+
+  .form-tableros.show {
+      transform: translateY(60px);
+  }
+
+  .form-tareas {
+      display: block;
+      position: absolute;
+      height: auto;
+      border-radius: 3px;
+      padding: 30px;
+      opacity: .9;
+      transform: translateY(-400px);
+      transition: transform .5s ease-in-out;
+
+  }
+
+  .form-tareas.show {
+      transform: translateY(60px);
+  }
+
+  .form-user{
+      display: block;
+      position: absolute;
+      height: auto;
+      border-radius: 3px;
+      padding: 30px;
+      opacity: .9;
+      transform: translateY(-400px);
+      transition: transform .5s ease-in-out;
+  }
+
+  .form-user.show{
+      transform: translateY(60px);
+  }
+
+  .form-contenido-user{
+      grid-template-columns: repeat(2,1fr); 
+  }
+
+}
+
+@media all and (max-width: 350px){
+
+  .container-bienvenida-lilo img{
+      width:  250px;
+  }
+  
+  .form-contenido-user{
+      grid-template-columns: 1fr; 
+  }
+}
+
+.nav-main, .showcase, .footer{
+  flex-grow: 1; /*Le asignamos un 1 para que abarque el 100% */
+  flex-basis: 100%; /*Tamaño inicial que va a tener nuestro contenedor hijo, le damos el 100% para que en celular abarque el 100% 
+  padding: 10px;
+
+}
+
+
+/*
+
+
+
+.nav-main, .izquierda, .center,.derecha, .footer {
+  flex-grow: 1; /*Le asignamos un 1 para que abarque el 100%
+  flex-basis: 100%; /*Tamaño inicial que va a tener nuestro contenedor hijo, le damos el 100% para que en celular abarque el 100% 
+  padding: 10px;
+}
+ 
+/*Cuando tenga 600 px o más...
+@media all and (min-width: 600px){
+  .aside{
+      flex: 1 1 auto; /*los elementos izquierda y derecha se posicionan uno al lado del otro ocupando un ancho automático
+  }
+}
+/*Cuando tenga 800 px o más...
+@media all and (min-width: 800px){
+  .center{
+      flex: 2 0; /*articulo es 2 veces cada cuadrado izquierda o derecha
+  }
+  .izquierda{order:1;}
+  .center{order:2;}
+  .derecha{order:3;}
+  .footer{order:4;}
+}
+
+
+
+#accordion{
+  margin: 100px auto;
+  width: 600px;
+}
+
+#accordion li{
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#accordion li label{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: rgb(116, 23, 108);
+}
+
+#accordion li label span{
+  transform: rotate(90deg);
+  font-size: 22px;
+  color: rgb(34, 4, 31);
+}
+
+#accordion label + input[type="radio"]{
+  display: none;
+}
+
+#accordion .content{
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+
+#accordion label + input[type="radio"]:checked + .content {
+  max-height: 400px;
+}
+*/
+
+/* CSS del Calendario */
+
+  /* .container-calendar {
+      width: 30%;
+      height: 70vh;
+      background-color: #f1c232 ;
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .calendar {
+      width: auto;
+      height: auto;
+      background-color: #222227;
+      box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+    }
+    
+    .month {
+      width: 100%;
+      height: 12rem;
+      background-color: #167e56;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      text-align: center;
+      text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
+    
+    .month i {
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
+    
+    .month h1 {
+      font-size: 3rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .month p {
+      font-size: 1.6rem;
+    }
+    
+    .weekdays {
+      width: 100%;
+      height: 5rem;
+      padding: 0 0.4rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .weekdays div {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+      width: calc(44.2rem / 7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
+    
+    .days {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.2rem;
+    }
+    
+    .days div {
+      font-size: 1.4rem;
+      margin: 0.3rem;
+      width: calc(40.2rem / 7);
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+      transition: background-color 0.2s;
+    }
+    
+    .days div:hover:not(.today) {
+      background-color: #262626;
+      border: 0.2rem solid #777;
+      cursor: pointer;
+    }
+    
+    .prev-date,
+    .next-date {
+      opacity: 0.5;
+    }
+    
+    .today {
+      background-color: #167e56;
+    } */
+
+
+
+
+
+    /* FIN CSS DE LILO - HAY QUE ACOMODAR E INTEGRAR */

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">    
+  <script src="https://kit.fontawesome.com/75ae08cc6f.js" crossorigin="anonymous"></script>
+  <!-- BOOSTRAP CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <!-- ico en el pestaña del navegador -->
+  <link rel="shortcut icon" href="IMG/colmena_Bv1-base.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="./main.css">
+    <title>PLATAFORMA COLMENA</title>
+</head>
+
+<body>
+  <div class="menu-btn"> <!-- icono para el menu 3 lineas -->
+    <i id='salir' class="fas fa-bars fa-2x"></i>
+</div>
+  <div class="container">
+    <!-- Navegacon principal -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Plataforma Colmena</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+           <a id="userSesion" class="nav-link logged-in"></a> <!--ACA TIENE QE IR EL USER ACTIVO EN SESION onclick="abrilModalPerfil()"  -->
+          <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Signin</a>
+          <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</a>
+          <a class="nav-link logged-in" href="#" id="logout">Logout</a>
+        </div>
+      </div>
+    </nav>  
+
+    <div class="nav-link logged-out" id="btn-abrir-modal-QueEs" ><img src="./IMG/colmena_Bv1 base.png" alt="todo"></div>
+
+     <!-- area de trabajo -->
+    <div class="showcase logged-in">
+
+      <nav id="navigator" class="tabs">
+        <ul id="tabs_head_id" class="tabs_head nav-tabs main-nav">
+          <li class="nav-item tabs_toggle is-active">
+            <div class="nav-link " id="search-link">HOME</div>
+          </li>
+          <li class="nav-item tabs_toggle">
+            <div class="nav-link " id="search-link">LILO</div>
+          </li>
+          <li class="nav-item tabs_toggle">
+            <div class="nav-link" id="home-link">PDD-PRT-PGO-RDN</div> 
+          </li>
+          <li class="nav-item tabs_toggle">
+            <div class="nav-link " id="search-link">NOVEDADES</div>
+          </li>
+          <li class="nav-item tabs_toggle">
+            <div class="nav-link " id="search-link">REPORTES DE PRODUCCION</div>
+          </li>
+          <li class="nav-item tabs_toggle">
+            <div class="nav-link " id="search-link">ACTORES</div>
+          </li>
+          <li class="nav-item tabs_toggle">
+            <div class="nav-link " id="search-link">BASE DE DATOS</div>
+          </li>
+          <li class="nav-item tabs_toggle">
+            <div class="nav-link " id="search-link">USUARIOS</div>
+          </li>
+          <li class="nav-item tabs_toggle">
+            <div class="nav-link" id="ajustes-link">CONFIGURACION</div> 
+          </li>
+          <li class="nav-item tabs_toggle">
+            <div class="nav-link" id="ayuda-link">AYUDA</div> 
+          </li>
+        </ul>
+      </nav>
+
+      <div id="app"></div>         
+        
+      <div id = "tabs_body_id" class="tabs_body">
+        <div class="tabs_content is-active">
+          <h1>BIENVENIDO A PLATAFORMA COLMENA!</h1>
+          <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalR" data-bs-whatever="@getbootstrap">
+            Terminar Registro
+          </button>
+          <br>
+          <label for=""> ACA VA DATOS RESUMIDOS SEGUN EL USUARIO Y SU TIPO DEL USURIO </label>
+          <br>
+          <label for=""> FECHA Y POSICION DEL PROYECTO </label>
+          <br>
+          <label for=""> UNA TABLA O LISTA DE TAREAS </label>
+          <br>
+          <label for=""> UNA TABLA O LISTA DE PEDIDOS </label>
+          <br>
+
+        </div>
+        <div class="tabs_content">  <!--  ESTE ES LILO-->
+          <div class="container">    
+            <div class="panel-herramientas">
+              <div class="title-panel" >
+                <h3 id="abrilModalPanelTableros" >PANEL TABLEROS Y TAREAS</h3>
+              </div> <!-- fin class="nombre-Panel" -->  
+              <div class="forms"> 
+                <form action=""  class="form-tableros" id="formAgregarTablero">
+                    <div class="form-titulo">
+                        <div class="form-group">
+                            <label >FORMULARIO TABLERO
+                            </label>
+                        </div> <!--fin class="form-titulo" -->
+                    </div>
+                    <div class="form-contenido">
+                        <div class="form-group">
+                            <label for="formTableroNombre"><i class="fa-solid fa-tablet"></i></label>
+                            <input type="text" placeholder="Nombra el tablero" id="formTableroNombre" name="formTableroNombre">
+                        </div> <!--fin class="form-group" -->
+                        <div class="form-group">
+                            <label for="formTableroColor"><i class="fa-solid fa-droplet"></i></label>
+                            <input type="color" id="formTableroColor"  value= '#77aaff' name="formTableroColor">
+                        </div> <!--fin class="form-group" -->
+                        <div class="form-footer">
+                            <div class="form-group">
+                                <button type="button" id="btnAddTarea" class="button is-danger">
+                                <i class="fa-solid fa-plus fa-2x"></i> 
+                                    </button>
+                            </div> <!--fin class="form-group" -->
+                        </div>
+                    </div>
+                    
+                </form> <!--fin id="formAgregarTablero" -->
+
+                <form action=""  class="form-tareas" id="formAgregarTarea">
+                    <div class="form-titulo">
+                        <div class="form-group">
+                            <label id="tituloformTarea"  >FORMULARIO TAREAS
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-contenido">
+                        <div class="form-group">
+                            <label for="formTareaNombreTablero"><i class="fa-solid fa-tablet"></i></i></label>
+                            <input id="formTareaNombreTablero" name="formTareaNombreTablero" disabled>
+                        </div> <!--fin class="form-group" -->
+                        <div class="form-group">
+                            <label for="formTareaTipoPrioridad"><i class="fa-solid fa-star"></i></i> </label>
+                                <select id = "formTareaTipoPrioridad" name="formTareaTipoPrioridad" autocomplete="off">
+                                    <option value="ALTA">ALTA</option>
+                                    <option value="MEDIA" selected >MEDIA</option>
+                                    <option value="BAJA">BAJA</option>
+                                </select>
+                        </div> <!--fin class="form-group" -->
+                        <div class="form-group"> 
+                            <label for="formTareaUsuario"><i class="fa-solid fa-user"></i></label>
+                                <select id = "formTareaUsuario" name="formTareaUsuario" autocomplete="off">
+                                </select>
+                        </div> <!--fin class="form-group" -->
+                        <div class="form-group">
+                            <label for="formTareaDescripcion"><i class="fa-solid fa-thumbtack"></i></label>
+                            <input type="text" id="formTareaDescripcion" size="40"  placeholder="Describe la tarea" name="formTareaDescripcion">
+                        </div> <!--fin class="form-group" -->
+                        <div class="form-footer">
+                        <div class="form-group">
+                                <button type="button" id="addTarea" class="button is-danger" >
+                                <i class="fa-solid fa-plus fa-2x"></i> 
+                                </button>
+                            </div> <!--fin class="form-group" -->
+                        </div>
+                    </div>
+                      
+                </form> <!--fin id="formAgregarTarea" -->
+                </div> <!--fin class="herramientas-forms" -->
+              </div> <!-- fin class="panel-herramientas" --> 
+      
+              <hr>
+              <div class="showcase">
+                  <div id='tableros' class="tabs" >
+                      <ul id="tabs_head_id3" class="tabs_head3">   
+                      </ul>
+                      <div id = "tabs_body_id3" class="tabs_body3">             
+                      </div>
+                  </div> <!-- fin id='tableros' --> 
+              </div>          
+          </div> <!-- fin icontainer --> 
+        </div>      
+        <div class="tabs_content"> <!-- INICIO PPPR -->
+
+          <nav> <!--nav secundaria-->
+            <ul id="tabs2_head_id" class="tabs_head2 nav-tabs main-nav">
+              <li class="nav-item tabs_toggle2 is-active2">
+                <div class="nav-link " id="">PRESUPUESTO</div>
+              </li>
+              <li class="nav-item tabs_toggle2">
+                <div class="nav-link " id="">PEDIDOS</div>
+              </li>
+              <li class="nav-item tabs_toggle2">
+                <div class="nav-link " id="">PAGOS</div>
+              </li>
+              <li class="nav-item tabs_toggle2">
+                <div class="nav-link " id="">RENDICIONES</div>
+              </li>
+            </ul>
+          </nav>
+
+          <div id="tabs2_body_id" class="tabs_body">
+
+            <div class="tabs_content2 is-active2">  <!-- prt -->
+              <h4>ACA VA PRESUPUESTO</h4>
+              <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCo_XbBfv13hd35bIYZZTfGcqRisHPb22tG-DB77LDLZKh6H38b4fHdnp-R0PAhcoo7kWUKYtlXzvr/pubhtml?widget=true&amp;headers=false"></iframe>
+            </div>
+            <div class="tabs_content2"> <!-- pdd -->
+              <div>
+                <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+                  FORMULARIO DE PEDIDO
+                </button>
+
+                <div class="btn-group" role="group">
+                  <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    DESCARGAR
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <li><a class="dropdown-item btn-sm" href="#">Formato.pdf</a></li>
+                    <li><a class="dropdown-item btn-sm" href="#">Formato.xlsx</a></li>
+                    <li><a class="dropdown-item btn-sm" href="#">Formato.txt</a></li>
+                  </ul>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="pedidosInput" placeholder="Filtrar Pedido x Cuit o NroPedido...">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="searchC"></span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+              <table class="table table-hover table-bordered table-sm" style="font-size:11px">
+                <thead>
+                  <tr>
+                    <th scope="col">EDITAR</th>
+                    <th scope="col">ELMINAR</th>
+                    <th scope="col">MARCA TEMPORAL</th>
+                    <th scope="col">NRO DE PEDIDO | LINK DE PEDIDO PDF</th>
+                    <th scope="col">ESTADO | LINK DE PAGO</th>
+                    <th scope="col">1RA APROBACION</th>
+                    <th scope="col">AREA</th>
+                    <th scope="col">RUBRO</th>
+                    <th scope="col">FECHA DE PAGO</th>
+                    <th scope="col">TIPO DE PEDIDO | ENCARGADO o TITULAR TARJETA</th>
+                    <th scope="col">COMPRA? | ALQUILER? </th>
+                    <th scope="col">DESCRIPCION SERVICIO/COMPRA</th>
+                    <th scope="col">FORMA DE PAGO</th>
+                    <th scope="col">NETO / SUBTOTAL</th>
+                    <th scope="col">NO GRAVADO</th>
+                    <th scope="col">ALICUOTA IMPUESTO | VALOR IMPUESTO</th>
+                    <th scope="col">INGRESOS BRTOS</th>
+                    <th scope="col">PERCEPCIONES</th>
+                    <th scope="col">TOTAL</th>
+                    <th scope="col">TOTAL PEDIDO EN EL RUBRO</th>
+                    <th scope="col">DISPONIBLE EN EL RUBRO</th>
+                    <th scope="col">TIPO Y NUMERO COMPROBANTE | LINK COMPROBANTE</th>
+                    <th scope="col">ANEXO | LINK ANEXO</th>
+                    <th scope="col">NRO CUIT | LINK CONSTANCIA DE CUIT</th>
+                    <th scope="col">RAZON SOCIAL PROVEEDOR</th>
+                    <th scope="col">EMAIL PROVEEDOR</th>
+                    <th scope="col">DATOS BANCARIO PROVEEDOR</th>
+                    <th scope="col">NRO CBU | LINK CBU</th>
+                    <th scope="col">OBS</th>
+                  </tr>
+                </thead>
+                <tbody id="pdd-guardados" class="pdd-guardados">
+                </tbody>
+              </table>
+
+            </div>
+            <div class="tabs_content2"> <!-- pgo -->
+              <h4>ACA VA PAGOS</h4>
+              <label for=""> aca se cargan los pagos </label>
+          <br>
+          <label for=""> aca se ven los pagos cargados </label>
+          <br>
+
+            </div>
+            <div class="tabs_content2">
+              <h4>ACA VA RENDICIONES</h4> <!-- rnd -->
+              <label for=""> aca se cargan los rendiciones </label>
+          <br>
+          <label for=""> aca se ven las rendiciones cargadas </label>
+          <br>
+
+            </div>
+
+          
+          </div>  
+
+
+          
+        </div>
+        <div class="tabs_content">
+          <h1>ACA VA NOVEDADES</h1>
+
+          <label for=""> aca se activa y desactivan areas</label>
+          <br>
+          <label for=""> aca se eligen los rubros que las areas pueden gestionar</label>
+          <br>
+          <label for=""> aca elige el orden en el que se quiere ver las cosas</label>
+          <br>
+          <label for=""> aca elige el theme de colores</label>
+          <br>
+          <label for=""> aca cargan las fechas del proyecto</label>
+          <br>
+          <label for=""> aca eligen las fechas que se pueden hacer pedidos</label>
+        </div>
+
+        <div class="tabs_content">
+          <h1>ACA VA REPORTES DE PRODUCCION</h1>
+
+          <label for=""> aca se activa y desactivan areas</label>
+          <br>
+          <label for=""> aca se eligen los rubros que las areas pueden gestionar</label>
+          <br>
+          <label for=""> aca elige el orden en el que se quiere ver las cosas</label>
+          <br>
+          <label for=""> aca elige el theme de colores</label>
+          <br>
+          <label for=""> aca cargan las fechas del proyecto</label>
+          <br>
+          <label for=""> aca eligen las fechas que se pueden hacer pedidos</label>
+        </div>
+
+        <div class="tabs_content">
+          <h1>ACA VA ACTORES</h1>
+
+          <label for=""> aca se activa y desactivan areas</label>
+          <br>
+          <label for=""> aca se eligen los rubros que las areas pueden gestionar</label>
+          <br>
+          <label for=""> aca elige el orden en el que se quiere ver las cosas</label>
+          <br>
+          <label for=""> aca elige el theme de colores</label>
+          <br>
+          <label for=""> aca cargan las fechas del proyecto</label>
+          <br>
+          <label for=""> aca eligen las fechas que se pueden hacer pedidos</label>
+        </div>
+
+
+
+        <div class="tabs_content">
+          <h1>ACA VA BASE DE DATOS</h1>
+          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR1H18keLSl8Lzozh0AXM26t6Ve7IO0KQpz94ftiToUDkPKX43yZMwX_WSFTt9_i5hos2fDwrf9TbTw/pubhtml?gid=36205812&amp;single=true&amp;widget=true&amp;headers=true"></iframe>
+        </div>
+        <div class="tabs_content">
+          <h1>ACA VA USUARIOS</h1>
+          <label for=""> aca se cargan usuarios </label>
+          <br>
+          <label for=""> aca se ven la lista de usuarios </label>
+          <br>
+          <label for=""> aca va un boton para enviar formulario de completar los datos personas</label>
+          <br>
+
+        </div>
+        <div class="tabs_content">
+          <h1>ACA VA CONFIGURACION</h1>
+
+          <label for=""> aca se activa y desactivan areas</label>
+          <br>
+          <label for=""> aca se eligen los rubros que las areas pueden gestionar</label>
+          <br>
+          <label for=""> aca elige el orden en el que se quiere ver las cosas</label>
+          <br>
+          <label for=""> aca elige el theme de colores</label>
+          <br>
+          <label for=""> aca cargan las fechas del proyecto</label>
+          <br>
+          <label for=""> aca eligen las fechas que se pueden hacer pedidos</label>
+        </div>
+
+        <div class="tabs_content">
+          <h1>ACA VA AYUDA</h1>
+
+          <label for=""> aca van expicaciones de como funcionan las herramientas</label>
+          <br>
+
+          <label for=""> acá van videos de como funciona</label>
+          <br>
+
+
+        </div>
+
+      </div>
+    </div>
+      <!-- FOOOTER -->
+    <div class="footer">
+
+      <section class="footer">
+        <div class="links">
+            <a href="https://www.facebook.com">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div> <!-- fin class="links" --> 
+    </section>
+
+
+    </div>
+  
+  </div> <!-- aca termina el div container -->
+  <!-- Modal -->
+
+  <dialog class="modal-dialogo info" id="modal-generico">
+    <div class= 'modal-dialogo-contenido' id="modal-generico-contenido">    
+    </div>
+    <div class="modal-dialogo-footer">
+      <button type="button" class="btn btn-secondary"  id= "cerrarModal">cerrar</button>
+  </div>
+  </dialog>
+
+
+  <!--FORMUALRIO DE LOGIN -->
+
+  <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalSignin"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>SignIn</h3>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="login-form">
+          <label for="email">Email</label>
+          <input type="text" id="login-email" class="form-control mb-3" placeholder="Title" required>
+          <label for="password">Password:</label>
+          <input type="password" id="login-password" class="form-control mb-3" placeholder="Password" required>
+
+          <button type="submit" class="btn btn-success w-100 mb-4">Login</button>
+
+          <button type="button" class="btn btn-info" id="googleLogin">Google</button>
+          <button type="button" class="btn btn-primary" id="facebookLogin">Facebook</button>
+          <!-- <button type="button" class="btn btn-dark" id="githubLogin">Github</button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<!--FORMUALRIO DE SIGNUP -->
+
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>SignUp</h3>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-5">
+        <form id="signup-form">
+          <label for="">DATOS PARA EL LOGIN</label>
+          <br>
+          <label for="email">Email:</label>
+          <input type="text" name="signup-email" class="form-control mb-3" id="signup-email"  placeholder="Title" required>
+    
+          <label for="password">Password:</label>
+          <input type="password" name="signup-password" class="form-control mb-3" id="signup-password"  placeholder="Password" required>
+  
+          <label for="rpassword">Repetir Password:</label>
+          <input type="password" name="user-rpass" class="form-control mb-3" id="user-rpass" placeholder="Repetir Password" >
+        
+
+         <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<!--FORMUALRIO DE REGISTRAR USUARIO DATA BASE-->
+  <div class="modal fade" id="exampleModalR" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>SignUp</h3>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-5">
+        <form id="signup-form">
+          <label for="">DATOS PARA EL LOGIN</label>
+          <br>
+          <label for="email">Email:</label>
+          <input type="text" name="signup-email" class="form-control mb-3" id="signup-email"  placeholder="Title" required>
+    
+          <label for="password">Password:</label>
+          <input type="password" name="signup-password" class="form-control mb-3" id="signup-password"  placeholder="Password" required>
+  
+          <label for="rpassword">Repetir Password:</label>
+          <input type="password" name="user-rpass" class="form-control mb-3" id="user-rpass" placeholder="Repetir Password" >
+        
+          <br>
+
+          <label for="">DATOS PERSONALES</label>
+          <br>
+          <label for="user-Pyt" >Proyecto:</label>
+            <select name="user-Pyt" class="form-control mb-3" id="user-Pyt">
+              <option value="">Proyecto 1</option>
+              <option value="">Proyecto 2</option>
+            </select>
+          
+          <label for="user-NroDni">Nro DNI:</label>
+          <input type="text" name="user-NroDni" class="form-control mb-3" id="user-NroDni" max="10" min="10" placeholder="Escribe tu nro de dni" >
+      
+          <label for="user-Nombre">Nombres/s:</label>
+          <input type="text" name="user-Nombre" class="form-control mb-3" id="user-Nombre" placeholder="Escribe tu/s Nombre/s" >
+      
+          
+          <label for="user-Apellido">Apellido/s:</label>
+          <input type="text" name="user-Apellido" class="form-control mb-3" id="user-Apellido" placeholder="Escribe tu/s Apellido/s">
+        
+          <label for="user-FNac">Fecha de Nacimiento:</label>
+          <input type="email"  name="user-FNac" class="form-control mb-3" id="user-FNac" placeholder="Escribe tu E-mail" >
+     
+
+        <label for="user-Nacion" >Nacionalidad:</label>
+        <input type="email"  name="user-Nacion" class="form-control mb-3" placeholder="Escribe tu Nacionalidad" id="user-Nacion">
+      
+      
+        <label for="user-Edad" >Edad:</label>
+        <input type="email" name="user-Edad" class="form-control mb-3" id="user-Edad" placeholder="Escribe tu Edad" >
+     
+      <label for="user-Domicilio" >Domicilio:</label>
+      <input type="text" name="user-Domicilio" class="form-control mb-3" id="user-Domicilio" placeholder="Escribe tu domicilio actual" >
+     
+        <label for="user-Cp" >Codigo Postal:</label>
+        <input type="text" name="user-Cp" class="form-control mb-3" id="user-Cp" placeholder="Escribe el CP de tu dopmicilio actual">
+      
+        <label for="user-Loc">Localidad:</label>
+        <input type="text" name="user-Loc" class="form-control mb-3" id="user-Loc" placeholder="Escribe la localidad de tu dopmicilio actual" >
+    
+      <label for="user-NroCuil" >CUIL:</label>
+      <input type="text" name="user-NroCuil" class="form-control mb-3"  id="user-NroCuil" placeholder="Escribe tu CUIL sin guiones">
+   
+        <label for="user-NroCelu" >Telefono:</label>
+        <input type="text" name="user-NroCelu"  class="form-control mb-3"  id="user-NroCelu" max="10" min="10" placeholder="Escribe tu nro de Cecular" >
+       
+          <label for="user-Estudios" >Estudio/s:</label>
+          <select  name="user-Estudios" class="form-control mb-3" id="user-Estudios">
+            <option value="">Secundario Incompleto</option>
+            <option value="">Secundario Completo</option>
+            <option value="">Terciario Completo</option>
+            <option value="">Terciario Incompleto</option>
+            <option value="">Universitario Completo</option>
+            <option value="">Universitario Incompleto</option>
+          </select>
+      
+          <label for="user-ContactoEme">Contacto de Emergencias:</label>
+          <input type="email" name="user-ContactoEme" class="form-control mb-3" id="user-ContactoEme" placeholder="Escribe tu E-mail">
+    
+        <label for="user-NombreObraSocial">Obra Social:</label>
+        <input type="text"  name="user-NombreObraSocial" class="form-control mb-3" id="user-NombreObraSocial" placeholder="Escribe el Nombre de tu Obra Social" >
+   
+        <label for="user-NroObraSocial">Nro Obra Social:</label>
+        <input type="text" name="user-NroObraSocial" class="form-control mb-3" id="user-NroObraSocial"  max="10" min="10" placeholder="Escribe el Nro de padrón de tu Obra Social" >
+
+        <label for="user-Bco">Banco:</label>
+        <input type="text" name="user-Bco" class="form-control mb-3"  id="user-Bco" placeholder="Escribe el nombre de tu Banco" >
+      
+        <label for="user-CtaBco">Nro Cta Bancaria:</label>
+        <input type="text"  name="user-CtaBco" class="form-control mb-3" id="user-CtaBco" placeholder="Escribe tu nro de cuenta" >
+
+      <label for="user-Alias">Alias:</label>
+      <input type="text"  name="user-Alias" class="form-contro mb-3l" id="user-Alias" placeholder="Escribe tu E-mail" >
+
+      <label for="user-NroCbu" >Nro CBU:</label>
+      <input type="text"  name="user-NroCbu" class="form-control mb-3" id="user-NroCbu" placeholder="Escribe tu E-mail" >
+
+      <label for="user-ASica" >¿Afiliado a SICA?:</label>
+      <select name="user-ASica" class="form-control mb-3" id="user-ASica">
+        <option value="">Si</option>
+        <option value="">No</option>
+      </select>
+
+      <label for="user-ASat" >¿Afiliado a SAT-SAID?:</label>
+      <select name="user-ASat" class="form-control mb-3" id="user-ASat">
+        <option value="">Si</option>
+        <option value="">No</option>
+      </select>
+
+      <label for="user-DniFrente" >Cargar Imagen del DNI:</label>
+      <input type="file" name="user-NroCbu" class="form-control mb-3"  placeholder="Escribe tu E-mail" id="user-NroCbu">
+
+         <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+<!--FORMUALRIO DE PEDIDO -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cargar Pedido Nuevo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="pdd-form">
+            <!-- email (usuario) y Area se obtiene por la sesion -->
+            <label for="tipo">TIPO DE PEDIDO:</label>
+            <select class="form-select" id="pdd-tipo">
+              <option value="" disabled selected>ACA VAN LOS TIPO DE PEDIDOS</option>
+            </select>
+            
+            <label for="ttarjeta">TITULAR DE TARJETA:</label>
+            <select  class="form-select" id="pdd-ttarjeta" placeholder="TITULAR TARJETA">
+              <option value="" disabled selected>ACA VA LOS TITULARES DE TARJETAS</option>
+            </select>
+            
+            <label for="rubro">ELEGIR RUBRO:</label>
+            <select  class="form-select" id="pdd-rubro">
+              <option value="" disabled selected>ACA VAN LOS RUBROS FILTRADOS POR EL AREA DEL USUARIO</option>
+            </select>
+            
+            <label for="fechapago">ELEGIR FECHA DE PAGO:</label>
+            <input type="date" class="form-control" id="pdd-fechapago"> 
+            
+            <label for="detalle">DETALLE DEL PEDIDO:</label>
+            <textarea type="text" class="form-control" rows="3" id="pdd-detalle" placeholder="ESCRIBIR DETALLE DEL PEDIDO"></textarea>
+            
+            <label for="formapago">FORMA DE PAGO:</label>
+            <select type="text" class="form-select" id="pdd-formapago">
+              <option value="" disabled selected>aca va una lista de FORMAs DE PAGO</option>
+            </select>
+            
+            <label for="neto">NETO / SUBTOTAL:</label>
+            <input type="number" step=".01" class="form-control monto" id="pdd-neto">
+            <!-- onkeyup="sumar() -->
+            
+            <label for="nogravado">VALOR NO GRAVADO:</label>
+            <input type="number" step=".01" class="form-control monto" id="pdd-nogravado"> 
+            
+            <label for="selectorimpuesto">TIPO DE IMPUESTO:</label>
+            
+            <select type="number" step=".01" class="form-select" id="pdd-selectorimpuesto"> 
+              <option value="" disabled selected>ACA LA LISTA DE PORCENTAJES DE IMPUESTOS</option>
+            </select>
+
+            <label for="percepciones">PERCEPCIONES:</label>
+            <input type="number" step=".01" class="form-control monto" id="pdd-percepciones"> 
+            <input type="number" step=".01" class="form-control monto" disabled id="pdd-resultadoimpuesto" placeholder="RESULTADO IMP">
+    
+            <label for="total">TOTAL DEL PEDIDO:</label>
+            <input class="form-control" id="pdd-total" disabled placeholder="TOTAL">
+    
+            <label for="razonsocial">PROVEEDOR:</label>
+            <select type="text" class="form-select" id="pdd-razonsocial">
+              <option value="" disabled selected>aca va una lista de PROVEEDOR</option>
+            </select>
+            <input type="text" class="form-control" id="pdd-nrocuit" placeholder="NRO CUIT">
+            <input type="text" class="form-control" id="pdd-datobancario" placeholder="DATOS BANCARIO">
+            <input type="text" class="form-control" id="pdd-obs" placeholder="EMAIL PROVEEDOR">
+          
+            <label for="comprobante">COMPROBANTE:</label>
+            <select type="text" class="form-select" id="pdd-tipocomprobante">
+              <option value="" disabled selected>aca va una lista de TIPO DE COMPROBANTE</option>
+            </select>
+            <input type="number" class="form-control" id="pdd-comprobante" placeholder="NRO DE COMPROBANTE">
+
+            <label for="pdd-comprobante">CARGAR EL COMPROBANTE:</label>
+            <input type="file" class="form-control" id="pdd-comprobante">
+
+            <label for="anexo">CARGAR EL ANEXO:</label>
+            <input type="file" class="form-control" id="pdd-anexo" placeholder="ANEXO"> 
+    
+            <div class="mb-3 ">
+              <button class="btn btn-secondary"  onClick= "upload()">Subir Archivos</button>
+              <span id= "urlComprobante"></span>
+              <span id= "urlDocumentacion"></span>
+            </div>
+            <div class="mb-3 ">
+              <button class="btn btn-secondary" id="btn-pdd-add">GENERAR PEDIDO</button>
+            </div>  
+          </form>
+        </div>
+        <div class="modal-footer"> 
+          <Label>NO TENGO NADA PARA AGREGAR EN EL FOOTER</Label>   
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Toastify js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./main.js" type="module"></script>
+</body>
+
+</html>
+
+
+
+<!-- <div id='tableros' class="tabs" >
+        <ul id="tabs_head_id" class="tabs_head">   
+        </ul>
+        <div id = "tabs_body_id" class="tabs_body">             
+        </div>
+      </div> fin id='tableros'  -->
+
+
+
+
+
+<!-- no lo uso. era para traer datos de postlist de firebase 
+                <div class="container p-4">
+                  <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                      <ul class="list-group posts">
+                      </ul>
+                    </div>
+                  </div>
+                </div>-->
+
+<!-- Content here -->
+      <!-- <h1 class="h4">Add Task</h1>
+        
+        <form id="task-form">
+          <label for="title">Title:</label>
+          <input
+          type="text"
+          id="task-title"
+          class="form-control mb-3"
+          class="My First Title"
+          placeholder="Task Title"
+          autofocus
+          />
+          
+          <label for="description">Description:</label>
+          <textarea
+          id="task-description"
+          rows="3"
+          class="form-control mb-3"
+          placeholder="Task Description"
+          ></textarea>
+          
+          <button class="btn btn-primary" id="btn-task-form">Save</button>
+        </form> -->
+
+
+
